@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_03_134528) do
+ActiveRecord::Schema.define(version: 2021_12_17_090148) do
 
   create_table "equipement_categories", force: :cascade do |t|
     t.string "name"
@@ -26,5 +26,20 @@ ActiveRecord::Schema.define(version: 2021_12_03_134528) do
     t.index ["equipement_categorie_id"], name: "index_equipements_on_equipement_categorie_id"
   end
 
+  create_table "location_options", force: :cascade do |t|
+    t.integer "state"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "option_id"
+    t.index ["option_id"], name: "index_location_options_on_option_id"
+  end
+
+  create_table "options", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   add_foreign_key "equipements", "equipement_categories", column: "equipement_categorie_id"
+  add_foreign_key "location_options", "options"
 end

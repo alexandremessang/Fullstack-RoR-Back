@@ -1,0 +1,2 @@
+class LocationOption < ApplicationRecord
+end
