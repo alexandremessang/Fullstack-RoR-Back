@@ -6,6 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.create({
+    email: "test@gmail.com",
+    password: "test1234",
+    password_confirmation: "test1234",
+    confirm_success_url: "/"
+})
+
+p "Users created"
+
 Location.create([{
     title: 'Maison de campagne',
     nbChambres: 4,
@@ -16,7 +25,7 @@ Location.create([{
     zip: "31000",
     city: "Toulouse",
     price: 2300,
-    photos: "{ 1: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.bXBIEi_yeMJ2zwco8V1GwgHaEE%26pid%3DApi&f=1' }",
+    photos: '{ "1": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.bXBIEi_yeMJ2zwco8V1GwgHaEE%26pid%3DApi&f=1" }',
     presentation: "Quos placeat est voluptatibus odit minima deleniti voluptas dicta. Maxime eligendi repellendus ratione velit error neque officia. Consequatur reiciendis tempora est labore nemo qui. Consequatur modi consequuntur modi ut est saepe cupiditate cum.",
     lattitude: "43.604260",
     longitude: "1.4436700"
@@ -31,7 +40,7 @@ Location.create([{
     zip: "91000",
     city: "Paris",
     price: 2300,
-    photos: "{ 1: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.bXBIEi_yeMJ2zwco8V1GwgHaEE%26pid%3DApi&f=1' }",
+    photos: '{ "1": "https://www.immoba.fr/site/images/normal/Picture13329803jpg_5ae023321132e.jpg" }',
     presentation: "Quos placeat est voluptatibus odit minima deleniti voluptas dicta. Maxime eligendi repellendus ratione velit error neque officia. Consequatur reiciendis tempora est labore nemo qui. Consequatur modi consequuntur modi ut est saepe cupiditate cum.",
     lattitude: "43.604260",
     longitude: "1.4436700"
