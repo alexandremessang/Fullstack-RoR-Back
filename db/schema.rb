@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_03_112641) do
+ActiveRecord::Schema.define(version: 2022_02_03_134439) do
 
   create_table "equipement_categories", force: :cascade do |t|
     t.string "name"
@@ -32,6 +32,24 @@ ActiveRecord::Schema.define(version: 2022_02_03_112641) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "option_id"
     t.index ["option_id"], name: "index_location_options_on_option_id"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "title", null: false
+    t.integer "nbChambres"
+    t.integer "nbCouchages"
+    t.text "description"
+    t.string "complementAdresse"
+    t.string "street"
+    t.string "zip"
+    t.string "city"
+    t.decimal "price", precision: 10, scale: 2
+    t.string "photos"
+    t.text "presentation"
+    t.float "lattitude"
+    t.float "longitude"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "messages", force: :cascade do |t|

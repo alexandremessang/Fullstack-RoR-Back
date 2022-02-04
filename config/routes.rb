@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      mount_devise_token_auth_for 'User', at: 'auth'
+      mount_devise_token_auth_for 'User', at: 'auth', controller: {
+        token_validations: 'overrides/token_validations'
+      }
+      resources :locations
       resources :equipements
       resources :location_options
       resources :options
